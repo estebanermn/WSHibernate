@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/11/2018 10:17:41 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="idat.edu.pe.Entidad.Pagos" table="PAGOS" schema="dbo" catalog="bdnotas" optimistic-lock="version">
+        <composite-id name="id" class="idat.edu.pe.Entidad.PagosId">
+            <key-property name="idAlumno" type="string">
+                <column name="IdAlumno" length="5" />
+            </key-property>
+            <key-property name="ciclo" type="string">
+                <column name="CICLO" length="6" />
+            </key-property>
+            <key-property name="ncuota" type="int">
+                <column name="NCUOTA" />
+            </key-property>
+        </composite-id>
+        <property name="monto" type="big_decimal">
+            <column name="MONTO" precision="12" not-null="true" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="FECHA" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

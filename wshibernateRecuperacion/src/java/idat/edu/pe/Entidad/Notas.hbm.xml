@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/11/2018 10:17:41 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="idat.edu.pe.Entidad.Notas" table="NOTAS" schema="dbo" catalog="bdnotas" optimistic-lock="version">
+        <composite-id name="id" class="idat.edu.pe.Entidad.NotasId">
+            <key-property name="idAlumno" type="string">
+                <column name="IdAlumno" length="5" />
+            </key-property>
+            <key-property name="idCurso" type="string">
+                <column name="IdCurso" length="4" />
+            </key-property>
+        </composite-id>
+        <property name="exaParcial" type="java.lang.Float">
+            <column name="ExaParcial" precision="24" scale="0" />
+        </property>
+        <property name="exaFinal" type="java.lang.Float">
+            <column name="ExaFinal" precision="24" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
